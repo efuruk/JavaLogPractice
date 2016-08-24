@@ -7,18 +7,21 @@ package jp.techacademy.eri.takashima.javalogpractice;
 import android.util.Log;
 
 class Human extends Animal implements Thinkable {
-    //コンストラクタ
-    public Human() {
-        name = "";
-        age = 0;
-        hobby = "";
-    }
+    public static String to_jp = "人間";
 
-    //引数付きコンストラクタ
-    public Human(String name, int age, String hobby) {
+    //メンバ変数
+    String hobby; //趣味
+
+    //コンストラクタ
+
+    public Human(String name, int age, String hobby){
         this.name = name;
         this.age = age;
         this.hobby = hobby;
+    }
+    //クラス関数
+    public static void introduce(){
+        Log.d("javatest", "これは人間クラスです。");
     }
 
     public void say() {
@@ -29,6 +32,5 @@ class Human extends Animal implements Thinkable {
     public void think() {
         Log.d("javatest", "私は" + this.hobby + "について考える。");
     }
-
 
 }
